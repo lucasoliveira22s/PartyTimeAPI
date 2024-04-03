@@ -1,0 +1,90 @@
+POST http://localhost:3000/api/services
+Content-Type: application/json
+
+{
+    "name": "Festa na praia",
+    "description": "Diverção",
+    "price": "1700",
+    "image": "http://image.png"
+}
+
+###
+GET http://localhost:3000/api/services 
+
+### 
+GET http://localhost:3000/api/services/6601fca5c976cf9da638ddee
+
+### 
+DELETE http://localhost:3000/api/services/6601fa05739a0a653476cd13
+
+###
+PUT  http://localhost:3000/api/services/6602075837c36545c068a827
+Content-Type: application/json
+
+{
+    "name": "algo no servidor",
+    "description": "descrição teste",
+    "price": "2000",
+    "image": "http://image.png"
+}
+
+###
+POST http://localhost:3000/api/parties
+Content-Type: application/json
+
+{
+    "title": "Meu evento 2",
+    "author": "Lucas",
+    "description": "Uma festa de aniversário",
+    "budget": 9000,
+    "image": "http://image.png",
+    "services": [
+        {
+            "name": "Festa na praia",
+            "description": "Diverção",
+            "price": 3000,
+            "image": "http://image.png"
+        },
+        {
+            "name": "Festa na praia 2",
+            "description": "Diverção",
+            "price": 2000,
+            "image": "http://image.png"
+        }
+    ]
+}
+
+###
+GET http://localhost:3000/api/parties
+
+###
+GET http://localhost:3000/api/parties/660ddaa6f7bd7648ba1e2b0f
+
+###
+DELETE  http://localhost:3000/api/parties/660ddaa6f7bd7648ba1e2b0f
+
+###
+PUT http://localhost:3000/api/parties/660de58d7f6252bc8823db38
+Content-Type: application/json
+
+{
+    "title": "Meu evento 2",
+    "author": "Lucas",
+    "description": "Uma festa de aniversário",
+    "budget": 10000,
+    "image": "http://image.png",
+    "services": [
+        {
+            "name": "Festa na praia",
+            "description": "Diverção",
+            "price": 3000,
+            "image": "http://image.png"
+        },
+        {
+            "name": "Festa na praia 2",
+            "description": "Diverção",
+            "price": 2000,
+            "image": "http://image.png"
+        }
+    ]
+}
